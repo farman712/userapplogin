@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: white;
+        margin-top: 20px;
+      }
+      form {
+        width: 200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: red;
+        border-radius: 5px;
+      }
+      span {
+        color: white;
+        font-weight: bold;
+        margin-right: 10px;
+        padding-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 92%;
+        color: white;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 3px;
+        background-color: transparent;
+        border: 2px solid white;
+      }
+      input[type="submit"] {
+        background-color: #715ed7;
+        color: white;
+        padding: 9px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        border: none;
+        outline: none;
+        border: 3px solid gold;
+      }
+      input[type="text"]::placeholder,
+      input[type="password"]::placeholder {
+        color: white;
+      }
+    </style>
+  </head>
+  <body align="center" bgcolor="#00ff00">
+    <h1>Login Form</h1>
+    <form action="LoginServlet5" method="post">
+      <span>Userid</span><input type="text" name="userid" /><br /><br />
+      <span> Password</span>
+      <input type="password" name="password" /><br /><br />
+      <input type="submit" value="Sign in" />
+    </form>
+  </body>
+</html>

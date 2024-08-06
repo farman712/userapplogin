@@ -1,0 +1,64 @@
+<web-app>
+	<listener>
+		<listener-class>MyDBListener5</listener-class>
+	</listener>
+	<context-param>
+	 	<param-name>connurl</param-name>
+		<param-value>jdbc:oracle:thin:@//LAPTOP-S2UPK277:1521/xe</param-value>
+	</context-param>
+
+   <context-param>
+	 	<param-name>dbusername</param-name>
+		<param-value>advjavabatch2</param-value>
+	</context-param>
+
+	<context-param>
+	 	<param-name>dbpwd</param-name>
+		<param-value>mystudents</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-class>LoginServlet5</servlet-class>
+		<servlet-name>LoginServlet5</servlet-name>
+
+	<init-param>
+		 <param-name>qry</param-name>
+		 <param-value>select username from users where userid=? and password=?</param-value>
+	</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet5</servlet-name>
+		<url-pattern>/LoginServlet5</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-class>RegistrationServlet5</servlet-class>
+		<servlet-name>RegistrationServlet5</servlet-name>
+
+	<init-param>
+		 <param-name>qry</param-name>
+		 <param-value>insert into users values(?,?,?)</param-value>
+	</init-param>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegistrationServlet5</servlet-name>
+		<url-pattern>/RegistrationServlet5</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-class>UpdateServlet5</servlet-class>
+		<servlet-name>UpdateServlet5</servlet-name>
+
+	<init-param>
+		 <param-name>qry</param-name>
+		 <param-value>update users set username=?,password=? where userid=?</param-value>
+	</init-param>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateServlet5</servlet-name>
+		<url-pattern>/UpdateServlet5</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
